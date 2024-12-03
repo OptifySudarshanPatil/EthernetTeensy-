@@ -25,11 +25,7 @@
 //  Higher SPI clock only results in faster transfer to hosts on a LAN
 //  or with very low packet latency.  With ordinary internet latency,
 //  the TCP window size & packet loss determine your overall speed.
-#ifndef ETHERNET_SPI_SPEED
-#define SPI_ETHERNET_SETTINGS SPISettings(30000000, MSBFIRST, SPI_MODE0)
-#else
-#define SPI_ETHERNET_SETTINGS SPISettings(ETHERNET_SPI_SPEED, MSBFIRST, SPI_MODE0)
-#endif
+#define SPI_ETHERNET_SETTINGS SPISettings(42000000, MSBFIRST, SPI_MODE0)
 
 // Require Ethernet.h, because we need MAX_SOCK_NUM
 #ifndef ethernet_h_
